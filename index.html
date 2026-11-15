@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lucas Eduardo | Sites para negócios locais</title>
+<meta name="description" content="Lucas Eduardo cria landing pages para negócios locais: rápidas, bonitas no celular e feitas para o cliente chamar no WhatsApp.">
+<meta name="theme-color" content="#2340D9">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400;62..125,500;62..125,700;62..125,800;62..125,900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --azul:#2340D9;
+    --azul-escuro:#1A30A8;
+    --tinta:#0E1330;
+    --gelo:#EEF1FF;
+    --branco:#FFFFFF;
+    --girassol:#FFC83D;
+    --linha:#D6DCF5;
+    --fonte:"Archivo", system-ui, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--branco);color:var(--tinta);font:400 1.0625rem/1.6 var(--fonte);-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--girassol);outline-offset:3px;border-radius:6px}
+  .wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+
+  .btn{display:inline-flex;align-items:center;gap:10px;background:var(--girassol);color:var(--tinta);font:700 1.05rem/1 var(--fonte);text-decoration:none;padding:18px 28px;border-radius:14px;box-shadow:0 4px 0 var(--tinta);transition:transform .15s,box-shadow .15s}
+  .btn:hover{transform:translateY(2px);box-shadow:0 2px 0 var(--tinta)}
+  .btn:active{transform:translateY(4px);box-shadow:0 0 0 var(--tinta)}
+  .btn svg{width:22px;height:22px;flex:none}
+  .link{font-weight:700;text-underline-offset:4px}
+
+  /* topo */
+  .topo{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+  .logo{font:900 1.15rem/1 var(--fonte);font-stretch:125%;text-decoration:none;letter-spacing:-.02em}
+  .topo nav{display:flex;gap:28px;align-items:center;font-weight:500}
+  .topo nav a{text-decoration:none}
+  .topo nav a:hover{color:var(--azul)}
+  .topo .btn{padding:12px 18px;font-size:.95rem}
+
+  /* hero */
+  .hero{padding:40px 0 0}
+  h1{font:900 clamp(3.4rem,13.5vw,12.5rem)/.82 var(--fonte);font-stretch:125%;letter-spacing:-.045em;margin:0;color:var(--azul)}
+  h1 span{display:block}
+  .hero-base{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end;margin-top:36px;padding-bottom:64px;border-bottom:2px solid var(--tinta)}
+  .hero-base p{font-size:clamp(1.25rem,2.2vw,1.6rem);line-height:1.35;max-width:30ch;margin:0;font-weight:500}
+
+  section{padding:110px 0}
+  h2{font:800 clamp(2.2rem,5vw,3.8rem)/.98 var(--fonte);font-stretch:112%;letter-spacing:-.035em;margin:0 0 20px;max-width:16ch}
+  .sub{font-size:1.15rem;max-width:48ch;margin:0 0 64px;color:#3A4166}
+
+  /* projetos: o elemento marcante */
+  .projeto{display:grid;grid-template-columns:1.55fr 1fr;gap:56px;align-items:center;padding:56px 0;border-top:1px solid var(--linha)}
+  .projeto:first-of-type{border-top:0;padding-top:0}
+  .projeto:nth-of-type(even) .vitrine{order:2}
+  .vitrine{position:relative;padding-bottom:40px}
+  .janela{background:var(--tinta);border-radius:16px;padding:10px;box-shadow:0 30px 60px -30px rgba(14,19,48,.55)}
+  .barra{display:flex;align-items:center;gap:6px;padding:2px 6px 10px}
+  .barra i{width:10px;height:10px;border-radius:50%;background:#4A5280}
+  .barra span{margin-left:10px;flex:1;background:#262C52;color:#B9C1EA;font-size:.78rem;border-radius:6px;padding:4px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tela{position:relative;overflow:hidden;border-radius:8px;background:var(--gelo);aspect-ratio:16/10}
+  .tela iframe{position:absolute;top:0;left:0;border:0;transform-origin:0 0;pointer-events:none;background:#fff}
+  .celular{position:absolute;right:-18px;bottom:0;width:23%;min-width:96px;background:var(--tinta);border-radius:26px;padding:7px;box-shadow:0 24px 40px -20px rgba(14,19,48,.6)}
+  .celular .tela{aspect-ratio:9/19;border-radius:20px}
+  .reserva{position:absolute;inset:0;display:grid;place-items:center;text-align:center;font:800 1.4rem/1.1 var(--fonte);font-stretch:112%;padding:16px}
+  .projeto h3{font:800 clamp(1.8rem,3.2vw,2.6rem)/1 var(--fonte);font-stretch:112%;letter-spacing:-.03em;margin:0 0 10px}
+  .tipo{font-weight:700;color:var(--azul);margin:0 0 18px}
+  .projeto p.desc{margin:0 0 22px;max-width:42ch;color:#3A4166}
+  .feito{list-style:none;padding:0;margin:0 0 30px;display:flex;flex-wrap:wrap;gap:8px}
+  .feito li{background:var(--gelo);border-radius:999px;padding:6px 14px;font-size:.92rem;font-weight:500}
+
+  /* processo */
+  .processo{background:var(--gelo)}
+  .passos{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;counter-reset:passo;list-style:none;margin:0;padding:0}
+  .passos li{counter-increment:passo}
+  .passos li::before{content:counter(passo);display:block;font:900 5rem/1 var(--fonte);font-stretch:125%;color:var(--azul);margin-bottom:16px}
+  .passos h3{font:700 1.35rem/1.2 var(--fonte);margin:0 0 8px}
+  .passos p{margin:0;color:#3A4166;max-width:34ch}
+
+  /* o que entra */
+  .entra{display:grid;grid-template-columns:repeat(2,1fr);gap:0 64px}
+  .entra div{padding:26px 0;border-bottom:1px solid var(--linha)}
+  .entra h3{font:700 1.2rem/1.3 var(--fonte);margin:0 0 4px}
+  .entra p{margin:0;color:#3A4166}
+
+  /* contato */
+  .contato{background:var(--azul);color:var(--branco)}
+  .contato h2{font-size:clamp(2.6rem,7vw,6rem);font-stretch:125%;max-width:12ch}
+  .contato .sub{color:#D3DBFF}
+  .rodape{background:var(--azul);color:#D3DBFF;padding:0 0 40px}
+  .rodape .wrap{border-top:1px solid #4A63E6;padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+  /* motion: os sites rolam devagar dentro das janelas */
+  @media (prefers-reduced-motion:no-preference){
+    .js h1 span{opacity:0;transform:translateY(40%);animation:entra .9s cubic-bezier(.2,.8,.2,1) forwards}
+    .js h1 span:nth-child(2){animation-delay:.12s}
+    @keyframes entra{to{opacity:1;transform:none}}
+    .tela iframe.rola{animation:rolar var(--dur,26s) ease-in-out infinite alternate}
+    .vitrine:hover iframe.rola{animation-play-state:paused}
+    @keyframes rolar{0%,8%{translate:0 0}92%,100%{translate:0 var(--fim,-60%)}}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+  @media (max-width:900px){
+    .hero-base{grid-template-columns:1fr}
+    .projeto{grid-template-columns:1fr;gap:32px}
+    .projeto:nth-of-type(even) .vitrine{order:0}
+    .celular{right:-6px}
+    .passos,.entra{grid-template-columns:1fr}
+    .topo nav a:not(.btn){display:none}
+    section{padding:80px 0}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="zap" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3Z"/></symbol>
+</svg>
+
+<!-- TROQUE 55XXXXXXXXXXX pelo seu WhatsApp com DDD, ex.: 5513999999999 -->
+<div class="wrap">
+  <header class="topo">
+    <a class="logo" href="#">Lucas Eduardo</a>
+    <nav aria-label="Principal">
+      <a href="#projetos">Projetos</a>
+      <a href="#como">Como funciona</a>
+      <a class="btn" href="https://wa.me/55XXXXXXXXXXX?text=Ol%C3%A1%2C%20Lucas!%20Quero%20um%20site%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#zap"/></svg>Falar comigo</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1 aria-label="Lucas Eduardo"><span aria-hidden="true">Lucas</span><span aria-hidden="true">Eduardo</span></h1>
+      <div class="hero-base">
+        <p>Crio sites para negócios locais: bonitos no celular, rápidos e feitos para o cliente chamar você no WhatsApp.</p>
+        <a class="btn" href="#projetos">Ver projetos</a>
+      </div>
+    </div>
+  </main>
+</div>
+
+<section id="projetos">
+  <div class="wrap">
+    <h2>Sites no ar</h2>
+    <p class="sub">Os projetos abaixo estão funcionando de verdade. Passe o mouse para pausar e clique para visitar.</p>
+
+    <article class="projeto">
+      <a class="vitrine" href="https://milenascharmann-studionail.vercel.app/" target="_blank" rel="noopener" aria-label="Abrir o site do Studio Nails Milena Scharman">
+        <div class="janela">
+          <div class="barra"><i></i><i></i><i></i><span>milenascharmann-studionail.vercel.app</span></div>
+          <div class="tela" style="background:#FFF5F2">
+            <div class="reserva" style="color:#E0123F">Studio Nails<br>Milena Scharman</div>
+            <iframe data-src="https://milenascharmann-studionail.vercel.app/" data-largura="1280" data-dur="28s" title="Prévia do site Studio Nails" loading="lazy" tabindex="-1"></iframe>
+          </div>
+        </div>
+        <div class="celular"><div class="tela" style="background:#FFF5F2">
+          <iframe data-src="https://milenascharmann-studionail.vercel.app/" data-largura="390" data-dur="34s" title="Prévia no celular do site Studio Nails" loading="lazy" tabindex="-1"></iframe>
+        </div></div>
+      </a>
+      <div>
+        <h3>Studio Nails Milena Scharman</h3>
+        <p class="tipo">Manicure em Cananéia, SP</p>
+        <p class="desc">Landing page para um studio de unhas com nota 5,0 no Google. O site mostra os serviços, as avaliações reais das clientes e leva direto para o agendamento no WhatsApp.</p>
+        <ul class="feito">
+          <li>Agendamento pelo WhatsApp</li><li>Avaliações do Google</li><li>Mapa</li><li>Animações</li>
+        </ul>
+        <a class="link" href="https://milenascharmann-studionail.vercel.app/" target="_blank" rel="noopener">Visitar o site</a>
+      </div>
+    </article>
+
+    <article class="projeto">
+      <a class="vitrine" href="https://nelsonburguer.vercel.app/" target="_blank" rel="noopener" aria-label="Abrir o site do Nelson Burguer">
+        <div class="janela">
+          <div class="barra"><i></i><i></i><i></i><span>nelsonburguer.vercel.app</span></div>
+          <div class="tela" style="background:#1D1410">
+            <div class="reserva" style="color:#FFB23F">Nelson<br>Burguer</div>
+            <iframe data-src="https://nelsonburguer.vercel.app/" data-largura="1280" data-dur="30s" title="Prévia do site Nelson Burguer" loading="lazy" tabindex="-1"></iframe>
+          </div>
+        </div>
+        <div class="celular"><div class="tela" style="background:#1D1410">
+          <iframe data-src="https://nelsonburguer.vercel.app/" data-largura="390" data-dur="36s" title="Prévia no celular do site Nelson Burguer" loading="lazy" tabindex="-1"></iframe>
+        </div></div>
+      </a>
+      <div>
+        <h3>Nelson Burguer</h3>
+        <p class="tipo">Hamburgueria</p>
+        <p class="desc">Site para hamburgueria, pensado para abrir a fome e facilitar o pedido: cardápio fácil de ler no celular e contato a um toque.</p>
+        <ul class="feito">
+          <li>Cardápio</li><li>Pedido pelo WhatsApp</li><li>Feito para celular</li>
+        </ul>
+        <a class="link" href="https://nelsonburguer.vercel.app/" target="_blank" rel="noopener">Visitar o site</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="processo" id="como">
+  <div class="wrap">
+    <h2>Do zero ao site no ar</h2>
+    <p class="sub">Você cuida do seu negócio. Eu cuido do resto.</p>
+    <ol class="passos">
+      <li><h3>A gente conversa</h3><p>Você me conta sobre o seu negócio e eu junto as informações: fotos, serviços, avaliações e endereço.</p></li>
+      <li><h3>Eu crio o design</h3><p>Monto um visual próprio para a sua marca e você aprova antes de publicar.</p></li>
+      <li><h3>Seu site vai pro ar</h3><p>Publico com endereço próprio, pronto para divulgar no Instagram, no Google e no WhatsApp.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>O que todo site leva</h2>
+    <p class="sub">Tudo o que um cliente procura antes de decidir.</p>
+    <div class="entra">
+      <div><h3>Botão de WhatsApp</h3><p>O cliente fala com você em um toque, já com a mensagem escrita.</p></div>
+      <div><h3>Feito para celular</h3><p>A maioria das pessoas vai abrir pelo celular, então ele vem primeiro.</p></div>
+      <div><h3>Avaliações e fotos</h3><p>O que seus clientes já disseram, em destaque, para passar confiança.</p></div>
+      <div><h3>Mapa e horário</h3><p>Endereço, rota e horário de atendimento sempre à mão.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contato">
+  <div class="wrap">
+    <h2>Seu negócio pode ser o próximo</h2>
+    <p class="sub">Me chama no WhatsApp e me conta o que você precisa. O orçamento é sem compromisso.</p>
+    <a class="btn" href="https://wa.me/55XXXXXXXXXXX?text=Ol%C3%A1%2C%20Lucas!%20Quero%20um%20site%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#zap"/></svg>Pedir orçamento no WhatsApp</a>
+  </div>
+</section>
+<footer class="rodape">
+  <div class="wrap">
+    <span>Lucas Eduardo, sites para negócios locais</span>
+    <a href="#">Voltar ao topo</a>
+  </div>
+</footer>
+
+<script>
+  // ajusta cada site ao tamanho da moldura e liga a rolagem automática
+  const ajustar = f => {
+    const tela = f.parentElement, w = +f.dataset.largura;
+    const escala = tela.clientWidth / w;
+    const altoTela = tela.clientHeight / escala;
+    const altoSite = w > 600 ? 3600 : 5200;
+    f.style.width = w + 'px';
+    f.style.height = altoSite + 'px';
+    f.style.transform = `scale(${escala})`;
+    f.style.setProperty('--fim', `-${Math.max(0, (altoSite - altoTela) * escala)}px`);
+    f.style.setProperty('--dur', f.dataset.dur);
+  };
+  const frames = [...document.querySelectorAll('.tela iframe')];
+  const carregar = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    const f = e.target; carregar.unobserve(f);
+    f.src = f.dataset.src;
+    f.addEventListener('load', () => { f.classList.add('rola'); f.previousElementSibling?.remove(); });
+  }), { rootMargin: '300px' });
+  frames.forEach(f => { ajustar(f); carregar.observe(f); });
+  addEventListener('resize', () => frames.forEach(ajustar));
+</script>
+</body>
+</html>
